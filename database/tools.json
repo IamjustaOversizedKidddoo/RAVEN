@@ -192,5 +192,290 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Scapy",
+    "description": "Powerful interactive packet manipulation library and network reconnaissance engine.",
+    "category": "network",
+    "secondary_categories": [
+      "reconnaissance",
+      "infrastructure"
+    ],
+    "repository": "https://github.com/secdev/scapy",
+    "website": "https://scapy.net",
+    "language": [
+      "Python"
+    ],
+    "interface": [
+      "CLI",
+      "Library"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "installation": "pip install scapy",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "GPL-2.0",
+    "status": "Active",
+    "tags": [
+      "packet-manipulation",
+      "network-scanning",
+      "packet-crafting",
+      "sniffing",
+      "network-recon"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Sniffnet",
+    "description": "Cross-platform application to monitor and analyze Internet network traffic comfortably and multilingually.",
+    "category": "network",
+    "secondary_categories": [
+      "visualization",
+      "infrastructure"
+    ],
+    "repository": "https://github.com/GyulyVGC/sniffnet",
+    "website": "https://sniffnet.net",
+    "language": [
+      "Rust"
+    ],
+    "interface": [
+      "GUI"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "installation": "cargo install sniffnet",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "traffic-monitor",
+      "network-analysis",
+      "packet-sniffer",
+      "gui",
+      "network-telemetry"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Rveng",
+    "description": "Advanced binary analysis and reverse engineering framework for executable inspection and disassembly.",
+    "category": "miscellaneous",
+    "secondary_categories": [
+      "metadata"
+    ],
+    "repository": "https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/advanced/rveng",
+    "website": "",
+    "language": [
+      "Python"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "Windows"
+    ],
+    "installation": "git clone https://github.com/CarterPerez-dev/Cybersecurity-Projects.git && cd Cybersecurity-Projects/PROJECTS/advanced/rveng && pip install -r requirements.txt",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "reverse-engineering",
+      "binary-analysis",
+      "disassembly",
+      "forensics",
+      "malware-analysis"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Containerlab",
+    "description": "Declarative container-based network lab orchestration system for simulating complex network topologies.",
+    "category": "infrastructure",
+    "secondary_categories": [
+      "automation",
+      "network"
+    ],
+    "repository": "https://github.com/srl-labs/containerlab",
+    "website": "https://containerlab.dev",
+    "language": [
+      "Go"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Linux",
+      "Docker"
+    ],
+    "installation": "bash -c \"$(curl -sL https://get.containerlab.dev)\"",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "BSD-3-Clause",
+    "status": "Active",
+    "tags": [
+      "lab-orchestration",
+      "network-topology",
+      "containers",
+      "docker",
+      "infrastructure-simulation"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "System Design 101",
+    "description": "Comprehensive visual reference and deep-dive compendium for system architecture and large-scale infrastructure design.",
+    "category": "infrastructure",
+    "secondary_categories": [
+      "miscellaneous"
+    ],
+    "repository": "https://github.com/ByteByteGoHq/system-design-101",
+    "website": "https://bytebytego.com",
+    "language": [
+      "Markdown"
+    ],
+    "interface": [
+      "Web"
+    ],
+    "platform": [
+      "Cross-platform"
+    ],
+    "installation": "git clone https://github.com/ByteByteGoHq/system-design-101.git",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "system-design",
+      "architecture",
+      "distributed-systems",
+      "infrastructure-reference",
+      "learning"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Awesome Networking (Facyber)",
+    "description": "Curated list of essential computer networking resources, protocols, packet analysis tools, and RFCs.",
+    "category": "network",
+    "secondary_categories": [
+      "miscellaneous"
+    ],
+    "repository": "https://github.com/facyber/awesome-networking",
+    "website": "",
+    "language": [
+      "Markdown"
+    ],
+    "interface": [
+      "Web"
+    ],
+    "platform": [
+      "Cross-platform"
+    ],
+    "installation": "git clone https://github.com/facyber/awesome-networking.git",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "CC0-1.0",
+    "status": "Active",
+    "tags": [
+      "networking-reference",
+      "protocols",
+      "rfc",
+      "awesome-list",
+      "network-education"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Awesome Networking (Nyquist)",
+    "description": "Curated index of modern network engineering tools, libraries, BGP frameworks, and performance analyzers.",
+    "category": "network",
+    "secondary_categories": [
+      "miscellaneous"
+    ],
+    "repository": "https://github.com/nyquist/awesome-networking",
+    "website": "",
+    "language": [
+      "Markdown"
+    ],
+    "interface": [
+      "Web"
+    ],
+    "platform": [
+      "Cross-platform"
+    ],
+    "installation": "git clone https://github.com/nyquist/awesome-networking.git",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "network-engineering",
+      "bgp-routing",
+      "telemetry",
+      "libraries",
+      "awesome-list"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Multiplayer Networking Resources",
+    "description": "Comprehensive technical index of real-time UDP network protocols, state synchronization, and packet architectures.",
+    "category": "miscellaneous",
+    "secondary_categories": [
+      "network"
+    ],
+    "repository": "https://github.com/0xFA11/MultiplayerNetworkingResources",
+    "website": "",
+    "language": [
+      "Markdown"
+    ],
+    "interface": [
+      "Web"
+    ],
+    "platform": [
+      "Cross-platform"
+    ],
+    "installation": "git clone https://github.com/0xFA11/MultiplayerNetworkingResources.git",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "udp-protocols",
+      "sockets",
+      "packet-sync",
+      "low-level-networking",
+      "network-architecture"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
   }
 ]
