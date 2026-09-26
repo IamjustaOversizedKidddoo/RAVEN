@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 RAVEN Index and Statistics Generator
-Computes live category counts and regenerates README tables and indexes from tools.json.
+Computes live category counts and regenerates README tables and usage blocks from tools.json.
 """
 
 import json
@@ -53,7 +53,7 @@ def generate():
 
     cat_table_md = "\n".join(cat_table_rows)
 
-    # Build Searchable Index (Find a Tool)
+    # Build Searchable Index with Actionable Usage Blocks
     search_index_rows = []
     has_tools = False
     for c in categories:
@@ -63,35 +63,45 @@ def generate():
         if tools_in_cat:
             has_tools = True
             search_index_rows.append(f"### {cname}")
+            search_index_rows.append("")
             for t in tools_in_cat:
                 tname = t["name"]
                 tdesc = t["description"]
-                doc_path = f"tools/{cid}/{tname.lower().replace(' ', '-')}.md"
-                repo_url = t.get("repository", "")
-                search_index_rows.append(f"- **[{tname}]({doc_path})** ([Upstream]({repo_url})) - {tdesc}")
-            search_index_rows.append("")
+                repo = t.get("repository", "")
+                ifaces = ", ".join(t.get("interface", []))
+                langs = ", ".join(t.get("language", []))
+                how_to = t.get("how_to_use", "")
+                cmd = t.get("command_example", "")
+
+                search_index_rows.append(f"#### [{tname}]({repo})")
+                search_index_rows.append(f"- **Purpose**: {tdesc}")
+                search_index_rows.append(f"- **Interface / Stack**: `{ifaces}` • `{langs}`")
+                search_index_rows.append(f"- **How It Can Be Used**: {how_to}")
+                if cmd:
+                    search_index_rows.append("```bash")
+                    search_index_rows.append(cmd)
+                    search_index_rows.append("```")
+                search_index_rows.append("")
 
     if has_tools:
         search_index_md = "\n".join(search_index_rows)
     else:
         search_index_md = "_Catalog currently empty. Submit an upstream repository to add the first entry._"
 
-    # Build Tool Matrix Table
+    # Build Tool Matrix Table (WITHOUT Card, API Key, or Status; WITH How It Can Be Used)
     if tools:
         matrix_rows = [
-            "| Tool | Category | Interface | Language | API Key | Status | Upstream Source | Card |",
-            "| :--- | :--- | :--- | :--- | :---: | :---: | :--- | :---: |"
+            "| Tool | Category | Interface | Language | How It Can Be Used | Upstream Source |",
+            "| :--- | :--- | :--- | :--- | :--- | :--- |"
         ]
         for t in sorted(tools, key=lambda x: x["name"].lower()):
             name = t.get("name", "")
             cat = t.get("category", "")
             ifaces = ", ".join(t.get("interface", []))
             langs = ", ".join(t.get("language", []))
-            api = "Required" if t.get("requires_api_key") else "None"
-            status = t.get("status", "Unknown")
+            how_to = t.get("how_to_use", t.get("description", ""))
             repo = t.get("repository", "")
-            doc_path = f"tools/{cat}/{name.lower().replace(' ', '-')}.md"
-            matrix_rows.append(f"| **{name}** | `{cat}` | {ifaces} | {langs} | `{api}` | `{status}` | [GitHub Repository]({repo}) | [Inspect Card]({doc_path}) |")
+            matrix_rows.append(f"| **{name}** | `{cat}` | {ifaces} | {langs} | {how_to} | [GitHub Repository]({repo}) |")
         tool_matrix_md = "\n".join(matrix_rows)
     else:
         tool_matrix_md = "_No tools cataloged yet. Submit an upstream repository to add the first entry._"
@@ -121,7 +131,7 @@ def generate():
 
         with open(README_PATH, "w", encoding="utf-8") as f:
             f.write(content)
-        print("[OK] README.md updated with live catalog statistics!")
+        print("[OK] README.md updated with live catalog statistics and usage blocks!")
 
     print("[OK] Index generation complete!")
 

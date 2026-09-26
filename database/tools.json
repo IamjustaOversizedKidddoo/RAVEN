@@ -38,7 +38,9 @@
       "recon"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Investigate email addresses across breach databases and social networks to build an identity graph, or harvest all corporate employee emails exposed across a target domain.",
+    "command_example": "mailaccess investigate target@example.com\n# Or harvest domain emails:\nmailaccess harvest-emails --domain target.com"
   },
   {
     "name": "TorBot",
@@ -76,7 +78,9 @@
       "threat-intelligence"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Crawl and map .onion hidden services, verify live uptime of onion endpoints, and generate interactive link-tree graphs illustrating dark web infrastructure dependencies.",
+    "command_example": "python torbot -u http://<target-service>.onion --status\n# Recursive crawl and save link tree:\npython torbot -u http://<target-service>.onion --depth 2 --save json"
   },
   {
     "name": "Horus",
@@ -115,7 +119,9 @@
       "recon"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Perform multi-vector OSINT triage, correlate indicators (usernames, domains, hashes), inspect metadata, and decode suspect artifacts via a unified terminal interface.",
+    "command_example": "python main.py --target \"identifier\" --module osint"
   },
   {
     "name": "Security News Scraper",
@@ -153,7 +159,9 @@
       "rss-aggregation"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Scrape, aggregate, and parse the latest cybersecurity news, vendor zero-day advisories, and extracted CVE identifiers into structured feeds for daily threat monitoring.",
+    "command_example": "go run main.go\n# Or build binary:\ngo build -o news-scraper main.go && ./news-scraper"
   },
   {
     "name": "Steganography Multi-Tool",
@@ -191,7 +199,9 @@
       "forensic-analysis"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Analyze digital image files (PNG, BMP, JPG) for hidden data, perform LSB analysis, and extract concealed textual payloads or embedded binary streams.",
+    "command_example": "python main.py --decode --image evidence.png\n# Encode message:\npython main.py --encode --image cover.png --output stego.png --message \"Secret\""
   },
   {
     "name": "Scapy",
@@ -230,7 +240,9 @@
       "network-recon"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Craft custom packet probes (TCP/UDP/ICMP), perform low-level network tracerouting, audit firewall rule boundaries, or sniff and dissect live interface frames.",
+    "command_example": "scapy\n# Example SYN probe:\n>>> sr1(IP(dst=\"192.168.1.1\")/TCP(dport=80, flags=\"S\"), timeout=2)"
   },
   {
     "name": "Sniffnet",
@@ -268,7 +280,9 @@
       "network-telemetry"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Monitor live network traffic through a cross-platform GUI to analyze connection bandwidth, track peer IP countries, and inspect communicating Autonomous Systems (ASNs).",
+    "command_example": "sniffnet"
   },
   {
     "name": "Rveng",
@@ -304,7 +318,9 @@
       "malware-analysis"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Disassemble compiled PE/ELF binaries, analyze import tables and headers, and harvest hardcoded C2 addresses and configuration strings offline during sample triage.",
+    "command_example": "python main.py --file target_sample.bin --disassemble\n# Inspect headers:\npython main.py --file target_sample.exe --headers"
   },
   {
     "name": "Containerlab",
@@ -340,7 +356,9 @@
       "infrastructure-simulation"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Deploy and manage containerized networking labs (Nokia, Cisco, Arista routers) from declarative YAML files to simulate target enterprise network topologies in Docker.",
+    "command_example": "sudo containerlab deploy --topo topology.clab.yml\n# Inspect running topology:\nsudo containerlab inspect --all"
   },
   {
     "name": "System Design 101",
@@ -374,7 +392,9 @@
       "learning"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Study visual architectural blueprints of distributed systems (load balancers, CDN edge caching, reverse proxies, and microservices) to model and analyze enterprise attack surfaces.",
+    "command_example": "git clone https://github.com/ByteByteGoHq/system-design-101.git\ncd system-design-101"
   },
   {
     "name": "Awesome Networking (Facyber)",
@@ -408,7 +428,9 @@
       "network-education"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Consult curated reference guides covering protocol specifications (TCP/IP, BGP, OSPF), RFC standards, packet structure, and network troubleshooting utilities.",
+    "command_example": "git clone https://github.com/facyber/awesome-networking.git"
   },
   {
     "name": "Awesome Networking (Nyquist)",
@@ -442,7 +464,9 @@
       "awesome-list"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Reference modern network engineering libraries, kernel-bypass capture frameworks, and routing daemons when researching large-scale internet topology and BGP routing.",
+    "command_example": "git clone https://github.com/nyquist/awesome-networking.git"
   },
   {
     "name": "Multiplayer Networking Resources",
@@ -476,6 +500,8 @@
       "network-architecture"
     ],
     "added_date": "2026-09-26",
-    "last_verified": "2026-09-26"
+    "last_verified": "2026-09-26",
+    "how_to_use": "Analyze low-level UDP socket communication, state synchronization algorithms, and packet serialization when reverse-engineering custom network protocols.",
+    "command_example": "git clone https://github.com/0xFA11/MultiplayerNetworkingResources.git"
   }
 ]

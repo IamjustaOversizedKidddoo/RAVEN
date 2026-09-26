@@ -106,6 +106,14 @@
       },
       "last_verified": {
         "type": "string"
+      },
+      "how_to_use": {
+        "type": "string",
+        "description": "Practical instructions and operational guidance explaining how the tool can be used."
+      },
+      "command_example": {
+        "type": "string",
+        "description": "Quick-start example command syntax for the tool."
       }
     }
   }

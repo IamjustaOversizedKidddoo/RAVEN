@@ -48,24 +48,24 @@ Rather than serving as an unstructured list of arbitrary bookmarks or a bloated 
 
 ## 2. Cataloged Arsenal (Tool Matrix)
 
-A quick-reference comparative matrix of all integrated tools across interfaces, runtimes, authentication requirements, and upstream repositories:
+A quick-reference comparative matrix of all integrated tools across interfaces, runtimes, practical usage capabilities, and upstream repositories:
 
 <!-- TOOL-MATRIX:START -->
-| Tool | Category | Interface | Language | API Key | Status | Upstream Source | Card |
-| :--- | :--- | :--- | :--- | :---: | :---: | :--- | :---: |
-| **Awesome Networking (Facyber)** | `network` | Web | Markdown | `None` | `Active` | [GitHub Repository](https://github.com/facyber/awesome-networking) | [Inspect Card](tools/network/awesome-networking-(facyber).md) |
-| **Awesome Networking (Nyquist)** | `network` | Web | Markdown | `None` | `Active` | [GitHub Repository](https://github.com/nyquist/awesome-networking) | [Inspect Card](tools/network/awesome-networking-(nyquist).md) |
-| **Containerlab** | `infrastructure` | CLI | Go | `None` | `Active` | [GitHub Repository](https://github.com/srl-labs/containerlab) | [Inspect Card](tools/infrastructure/containerlab.md) |
-| **Horus** | `investigation-frameworks` | CLI | Python | `None` | `Active` | [GitHub Repository](https://github.com/6abd/horus) | [Inspect Card](tools/investigation-frameworks/horus.md) |
-| **MailAccess** | `emails` | CLI, Web | Python, TypeScript | `None` | `Active` | [GitHub Repository](https://github.com/KatrielMoses/MailAccess) | [Inspect Card](tools/emails/mailaccess.md) |
-| **Multiplayer Networking Resources** | `miscellaneous` | Web | Markdown | `None` | `Active` | [GitHub Repository](https://github.com/0xFA11/MultiplayerNetworkingResources) | [Inspect Card](tools/miscellaneous/multiplayer-networking-resources.md) |
-| **Rveng** | `miscellaneous` | CLI | Python | `None` | `Active` | [GitHub Repository](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/advanced/rveng) | [Inspect Card](tools/miscellaneous/rveng.md) |
-| **Scapy** | `network` | CLI, Library | Python | `None` | `Active` | [GitHub Repository](https://github.com/secdev/scapy) | [Inspect Card](tools/network/scapy.md) |
-| **Security News Scraper** | `news` | CLI | Go | `None` | `Active` | [GitHub Repository](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/intermediate/security-news-scraper) | [Inspect Card](tools/news/security-news-scraper.md) |
-| **Sniffnet** | `network` | GUI | Rust | `None` | `Active` | [GitHub Repository](https://github.com/GyulyVGC/sniffnet) | [Inspect Card](tools/network/sniffnet.md) |
-| **Steganography Multi-Tool** | `metadata` | CLI | Python | `None` | `Active` | [GitHub Repository](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/steganography-multi-tool) | [Inspect Card](tools/metadata/steganography-multi-tool.md) |
-| **System Design 101** | `infrastructure` | Web | Markdown | `None` | `Active` | [GitHub Repository](https://github.com/ByteByteGoHq/system-design-101) | [Inspect Card](tools/infrastructure/system-design-101.md) |
-| **TorBot** | `dark-web` | CLI | Python | `None` | `Active` | [GitHub Repository](https://github.com/DedSecInside/TorBot) | [Inspect Card](tools/dark-web/torbot.md) |
+| Tool | Category | Interface | Language | How It Can Be Used | Upstream Source |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Awesome Networking (Facyber)** | `network` | Web | Markdown | Consult curated reference guides covering protocol specifications (TCP/IP, BGP, OSPF), RFC standards, packet structure, and network troubleshooting utilities. | [GitHub Repository](https://github.com/facyber/awesome-networking) |
+| **Awesome Networking (Nyquist)** | `network` | Web | Markdown | Reference modern network engineering libraries, kernel-bypass capture frameworks, and routing daemons when researching large-scale internet topology and BGP routing. | [GitHub Repository](https://github.com/nyquist/awesome-networking) |
+| **Containerlab** | `infrastructure` | CLI | Go | Deploy and manage containerized networking labs (Nokia, Cisco, Arista routers) from declarative YAML files to simulate target enterprise network topologies in Docker. | [GitHub Repository](https://github.com/srl-labs/containerlab) |
+| **Horus** | `investigation-frameworks` | CLI | Python | Perform multi-vector OSINT triage, correlate indicators (usernames, domains, hashes), inspect metadata, and decode suspect artifacts via a unified terminal interface. | [GitHub Repository](https://github.com/6abd/horus) |
+| **MailAccess** | `emails` | CLI, Web | Python, TypeScript | Investigate email addresses across breach databases and social networks to build an identity graph, or harvest all corporate employee emails exposed across a target domain. | [GitHub Repository](https://github.com/KatrielMoses/MailAccess) |
+| **Multiplayer Networking Resources** | `miscellaneous` | Web | Markdown | Analyze low-level UDP socket communication, state synchronization algorithms, and packet serialization when reverse-engineering custom network protocols. | [GitHub Repository](https://github.com/0xFA11/MultiplayerNetworkingResources) |
+| **Rveng** | `miscellaneous` | CLI | Python | Disassemble compiled PE/ELF binaries, analyze import tables and headers, and harvest hardcoded C2 addresses and configuration strings offline during sample triage. | [GitHub Repository](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/advanced/rveng) |
+| **Scapy** | `network` | CLI, Library | Python | Craft custom packet probes (TCP/UDP/ICMP), perform low-level network tracerouting, audit firewall rule boundaries, or sniff and dissect live interface frames. | [GitHub Repository](https://github.com/secdev/scapy) |
+| **Security News Scraper** | `news` | CLI | Go | Scrape, aggregate, and parse the latest cybersecurity news, vendor zero-day advisories, and extracted CVE identifiers into structured feeds for daily threat monitoring. | [GitHub Repository](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/intermediate/security-news-scraper) |
+| **Sniffnet** | `network` | GUI | Rust | Monitor live network traffic through a cross-platform GUI to analyze connection bandwidth, track peer IP countries, and inspect communicating Autonomous Systems (ASNs). | [GitHub Repository](https://github.com/GyulyVGC/sniffnet) |
+| **Steganography Multi-Tool** | `metadata` | CLI | Python | Analyze digital image files (PNG, BMP, JPG) for hidden data, perform LSB analysis, and extract concealed textual payloads or embedded binary streams. | [GitHub Repository](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/steganography-multi-tool) |
+| **System Design 101** | `infrastructure` | Web | Markdown | Study visual architectural blueprints of distributed systems (load balancers, CDN edge caching, reverse proxies, and microservices) to model and analyze enterprise attack surfaces. | [GitHub Repository](https://github.com/ByteByteGoHq/system-design-101) |
+| **TorBot** | `dark-web` | CLI | Python | Crawl and map .onion hidden services, verify live uptime of onion endpoints, and generate interactive link-tree graphs illustrating dark web infrastructure dependencies. | [GitHub Repository](https://github.com/DedSecInside/TorBot) |
 <!-- TOOL-MATRIX:END -->
 
 ---
@@ -76,33 +76,139 @@ Quickly locate tools organized by their primary operational intelligence domain:
 
 <!-- SEARCH-INDEX:START -->
 ### Email Intelligence
-- **[MailAccess](tools/emails/mailaccess.md)** ([Upstream](https://github.com/KatrielMoses/MailAccess)) - High-throughput email OSINT investigation toolkit and domain-level mailbox harvesting engine.
+
+#### [MailAccess](https://github.com/KatrielMoses/MailAccess)
+- **Purpose**: High-throughput email OSINT investigation toolkit and domain-level mailbox harvesting engine.
+- **Interface / Stack**: `CLI, Web` • `Python, TypeScript`
+- **How It Can Be Used**: Investigate email addresses across breach databases and social networks to build an identity graph, or harvest all corporate employee emails exposed across a target domain.
+```bash
+mailaccess investigate target@example.com
+# Or harvest domain emails:
+mailaccess harvest-emails --domain target.com
+```
 
 ### Metadata Analysis
-- **[Steganography Multi-Tool](tools/metadata/steganography-multi-tool.md)** ([Upstream](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/steganography-multi-tool)) - Forensic image steganography analyzer and hidden payload detection utility.
+
+#### [Steganography Multi-Tool](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/steganography-multi-tool)
+- **Purpose**: Forensic image steganography analyzer and hidden payload detection utility.
+- **Interface / Stack**: `CLI` • `Python`
+- **How It Can Be Used**: Analyze digital image files (PNG, BMP, JPG) for hidden data, perform LSB analysis, and extract concealed textual payloads or embedded binary streams.
+```bash
+python main.py --decode --image evidence.png
+# Encode message:
+python main.py --encode --image cover.png --output stego.png --message "Secret"
+```
 
 ### Dark Web & Hidden Services
-- **[TorBot](tools/dark-web/torbot.md)** ([Upstream](https://github.com/DedSecInside/TorBot)) - Dark web OSINT crawler, hidden services mapper, and link tree visualizer for the Tor network.
+
+#### [TorBot](https://github.com/DedSecInside/TorBot)
+- **Purpose**: Dark web OSINT crawler, hidden services mapper, and link tree visualizer for the Tor network.
+- **Interface / Stack**: `CLI` • `Python`
+- **How It Can Be Used**: Crawl and map .onion hidden services, verify live uptime of onion endpoints, and generate interactive link-tree graphs illustrating dark web infrastructure dependencies.
+```bash
+python torbot -u http://<target-service>.onion --status
+# Recursive crawl and save link tree:
+python torbot -u http://<target-service>.onion --depth 2 --save json
+```
 
 ### Network & IP Intelligence
-- **[Scapy](tools/network/scapy.md)** ([Upstream](https://github.com/secdev/scapy)) - Powerful interactive packet manipulation library and network reconnaissance engine.
-- **[Sniffnet](tools/network/sniffnet.md)** ([Upstream](https://github.com/GyulyVGC/sniffnet)) - Cross-platform application to monitor and analyze Internet network traffic comfortably and multilingually.
-- **[Awesome Networking (Facyber)](tools/network/awesome-networking-(facyber).md)** ([Upstream](https://github.com/facyber/awesome-networking)) - Curated list of essential computer networking resources, protocols, packet analysis tools, and RFCs.
-- **[Awesome Networking (Nyquist)](tools/network/awesome-networking-(nyquist).md)** ([Upstream](https://github.com/nyquist/awesome-networking)) - Curated index of modern network engineering tools, libraries, BGP frameworks, and performance analyzers.
+
+#### [Scapy](https://github.com/secdev/scapy)
+- **Purpose**: Powerful interactive packet manipulation library and network reconnaissance engine.
+- **Interface / Stack**: `CLI, Library` • `Python`
+- **How It Can Be Used**: Craft custom packet probes (TCP/UDP/ICMP), perform low-level network tracerouting, audit firewall rule boundaries, or sniff and dissect live interface frames.
+```bash
+scapy
+# Example SYN probe:
+>>> sr1(IP(dst="192.168.1.1")/TCP(dport=80, flags="S"), timeout=2)
+```
+
+#### [Sniffnet](https://github.com/GyulyVGC/sniffnet)
+- **Purpose**: Cross-platform application to monitor and analyze Internet network traffic comfortably and multilingually.
+- **Interface / Stack**: `GUI` • `Rust`
+- **How It Can Be Used**: Monitor live network traffic through a cross-platform GUI to analyze connection bandwidth, track peer IP countries, and inspect communicating Autonomous Systems (ASNs).
+```bash
+sniffnet
+```
+
+#### [Awesome Networking (Facyber)](https://github.com/facyber/awesome-networking)
+- **Purpose**: Curated list of essential computer networking resources, protocols, packet analysis tools, and RFCs.
+- **Interface / Stack**: `Web` • `Markdown`
+- **How It Can Be Used**: Consult curated reference guides covering protocol specifications (TCP/IP, BGP, OSPF), RFC standards, packet structure, and network troubleshooting utilities.
+```bash
+git clone https://github.com/facyber/awesome-networking.git
+```
+
+#### [Awesome Networking (Nyquist)](https://github.com/nyquist/awesome-networking)
+- **Purpose**: Curated index of modern network engineering tools, libraries, BGP frameworks, and performance analyzers.
+- **Interface / Stack**: `Web` • `Markdown`
+- **How It Can Be Used**: Reference modern network engineering libraries, kernel-bypass capture frameworks, and routing daemons when researching large-scale internet topology and BGP routing.
+```bash
+git clone https://github.com/nyquist/awesome-networking.git
+```
 
 ### Infrastructure & Cloud Assets
-- **[Containerlab](tools/infrastructure/containerlab.md)** ([Upstream](https://github.com/srl-labs/containerlab)) - Declarative container-based network lab orchestration system for simulating complex network topologies.
-- **[System Design 101](tools/infrastructure/system-design-101.md)** ([Upstream](https://github.com/ByteByteGoHq/system-design-101)) - Comprehensive visual reference and deep-dive compendium for system architecture and large-scale infrastructure design.
+
+#### [Containerlab](https://github.com/srl-labs/containerlab)
+- **Purpose**: Declarative container-based network lab orchestration system for simulating complex network topologies.
+- **Interface / Stack**: `CLI` • `Go`
+- **How It Can Be Used**: Deploy and manage containerized networking labs (Nokia, Cisco, Arista routers) from declarative YAML files to simulate target enterprise network topologies in Docker.
+```bash
+sudo containerlab deploy --topo topology.clab.yml
+# Inspect running topology:
+sudo containerlab inspect --all
+```
+
+#### [System Design 101](https://github.com/ByteByteGoHq/system-design-101)
+- **Purpose**: Comprehensive visual reference and deep-dive compendium for system architecture and large-scale infrastructure design.
+- **Interface / Stack**: `Web` • `Markdown`
+- **How It Can Be Used**: Study visual architectural blueprints of distributed systems (load balancers, CDN edge caching, reverse proxies, and microservices) to model and analyze enterprise attack surfaces.
+```bash
+git clone https://github.com/ByteByteGoHq/system-design-101.git
+cd system-design-101
+```
 
 ### News & Media Monitoring
-- **[Security News Scraper](tools/news/security-news-scraper.md)** ([Upstream](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/intermediate/security-news-scraper)) - Automated cybersecurity news aggregator, RSS harvester, and threat advisory scraper.
+
+#### [Security News Scraper](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/intermediate/security-news-scraper)
+- **Purpose**: Automated cybersecurity news aggregator, RSS harvester, and threat advisory scraper.
+- **Interface / Stack**: `CLI` • `Go`
+- **How It Can Be Used**: Scrape, aggregate, and parse the latest cybersecurity news, vendor zero-day advisories, and extracted CVE identifiers into structured feeds for daily threat monitoring.
+```bash
+go run main.go
+# Or build binary:
+go build -o news-scraper main.go && ./news-scraper
+```
 
 ### Comprehensive OSINT Frameworks
-- **[Horus](tools/investigation-frameworks/horus.md)** ([Upstream](https://github.com/6abd/horus)) - Multi-purpose OSINT and digital forensics assistant for unified artifact investigation and data synthesis.
+
+#### [Horus](https://github.com/6abd/horus)
+- **Purpose**: Multi-purpose OSINT and digital forensics assistant for unified artifact investigation and data synthesis.
+- **Interface / Stack**: `CLI` • `Python`
+- **How It Can Be Used**: Perform multi-vector OSINT triage, correlate indicators (usernames, domains, hashes), inspect metadata, and decode suspect artifacts via a unified terminal interface.
+```bash
+python main.py --target "identifier" --module osint
+```
 
 ### Miscellaneous & Auxiliary Tools
-- **[Rveng](tools/miscellaneous/rveng.md)** ([Upstream](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/advanced/rveng)) - Advanced binary analysis and reverse engineering framework for executable inspection and disassembly.
-- **[Multiplayer Networking Resources](tools/miscellaneous/multiplayer-networking-resources.md)** ([Upstream](https://github.com/0xFA11/MultiplayerNetworkingResources)) - Comprehensive technical index of real-time UDP network protocols, state synchronization, and packet architectures.
+
+#### [Rveng](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/advanced/rveng)
+- **Purpose**: Advanced binary analysis and reverse engineering framework for executable inspection and disassembly.
+- **Interface / Stack**: `CLI` • `Python`
+- **How It Can Be Used**: Disassemble compiled PE/ELF binaries, analyze import tables and headers, and harvest hardcoded C2 addresses and configuration strings offline during sample triage.
+```bash
+python main.py --file target_sample.bin --disassemble
+# Inspect headers:
+python main.py --file target_sample.exe --headers
+```
+
+#### [Multiplayer Networking Resources](https://github.com/0xFA11/MultiplayerNetworkingResources)
+- **Purpose**: Comprehensive technical index of real-time UDP network protocols, state synchronization, and packet architectures.
+- **Interface / Stack**: `Web` • `Markdown`
+- **How It Can Be Used**: Analyze low-level UDP socket communication, state synchronization algorithms, and packet serialization when reverse-engineering custom network protocols.
+```bash
+git clone https://github.com/0xFA11/MultiplayerNetworkingResources.git
+```
 
 <!-- SEARCH-INDEX:END -->
 
