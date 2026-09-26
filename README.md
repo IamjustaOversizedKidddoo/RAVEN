@@ -12,7 +12,7 @@
 > **Fast, actionable OSINT & security research arsenal. Open, search, grab the command, and run.**
 
 [![Status](https://img.shields.io/badge/STATUS-OPERATIONAL-00FF66?style=flat-square&labelColor=0a0a0a)](https://github.com/IamjustaOversizedKidddoo/RAVEN)
-[![Tools](https://img.shields.io/badge/CATALOGED%20TOOLS-13-blue?style=flat-square&labelColor=0a0a0a)](database/tools.json)
+[![Tools](https://img.shields.io/badge/CATALOGED%20TOOLS-17-blue?style=flat-square&labelColor=0a0a0a)](database/tools.json)
 [![Categories](https://img.shields.io/badge/TAXONOMY-33%20DOMAINS-purple?style=flat-square&labelColor=0a0a0a)](database/categories.json)
 [![License](https://img.shields.io/badge/LICENSE-MIT-lightgrey?style=flat-square&labelColor=0a0a0a)](LICENSE)
 
@@ -22,7 +22,9 @@
 
 Jump directly to an active category:
 
-[Email Intelligence](#email-intelligence-emails) • [Dark Web & Hidden Services](#dark-web--hidden-services-dark-web) • [Network & IP Intelligence](#network--ip-intelligence-network) • [Infrastructure & Cloud](#infrastructure--cloud-assets-infrastructure) • [News & Threat Feeds](#news--media-monitoring-news) • [Metadata & Forensics](#metadata-analysis-metadata) • [OSINT Frameworks](#comprehensive-osint-frameworks-investigation-frameworks) • [Reverse Engineering & Protocols](#miscellaneous--auxiliary-tools-miscellaneous)
+<!-- NAV:START -->
+[Email Intelligence](#email-intelligence-emails) • [Image & Forensic Intelligence](#image-forensic-intelligence-images) • [Metadata Analysis](#metadata-analysis-metadata) • [Dark Web & Hidden Services](#dark-web-hidden-services-dark-web) • [Network & IP Intelligence](#network-ip-intelligence-network) • [Infrastructure & Cloud Assets](#infrastructure-cloud-assets-infrastructure) • [Aviation & Flight Tracking](#aviation-flight-tracking-aviation) • [News & Media Monitoring](#news-media-monitoring-news) • [External Attack Surface Recon](#external-attack-surface-recon-reconnaissance) • [Comprehensive OSINT Frameworks](#comprehensive-osint-frameworks-investigation-frameworks) • [Miscellaneous & Auxiliary Tools](#miscellaneous-auxiliary-tools-miscellaneous)
+<!-- NAV:END -->
 
 ---
 
@@ -44,6 +46,24 @@ mailaccess harvest-emails --domain target.com
 
 ---
 
+### Image & Forensic Intelligence (`images`)
+
+#### [FaceCheck.ID](https://facecheck.id) — `Web, API` • `Python, Web`
+> **AI-powered facial recognition search engine to find social media profiles, news articles, and web appearances by photo.**
+
+**How to use:** Upload a photo of a person to reverse-search facial biometrics across public web pages, social media profiles, news publications, and public registries.
+
+```bash
+# Access web interface directly:
+# Visit: https://facecheck.id
+
+# Or query via unofficial Python API:
+pip install requests
+# Upload image and search biometric face matches
+```
+
+---
+
 ### Metadata Analysis (`metadata`)
 
 #### [Steganography Multi-Tool](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/steganography-multi-tool) — `CLI` • `Python`
@@ -60,6 +80,19 @@ python main.py --encode --image cover.png --output stego.png --message "Secret"
 ---
 
 ### Dark Web & Hidden Services (`dark-web`)
+
+#### [Robin](https://github.com/apurvsinghgautam/robin) — `CLI, Web` • `Python`
+> **AI-powered dark web OSINT investigation tool utilizing LLMs for query refinement, intelligent filtering, and onion summarization.**
+
+**How to use:** Conduct AI-assisted dark web intelligence gathering; Robin uses LLMs (OpenAI, Claude, Gemini, or local Ollama) to rephrase search queries, crawl onion engines, and summarize findings.
+
+```bash
+# Run Web UI mode via Docker (requires running Tor daemon):
+docker run -d -p 5000:5000 --env-file .env apurvsg/robin:latest
+
+# Or CLI investigation:
+python robin.py --query "target alias or keyword" --llm gpt-4
+```
 
 #### [TorBot](https://github.com/DedSecInside/TorBot) — `CLI` • `Python`
 > **Dark web OSINT crawler, hidden services mapper, and link tree visualizer for the Tor network.**
@@ -141,6 +174,23 @@ cd system-design-101
 
 ---
 
+### Aviation & Flight Tracking (`aviation`)
+
+#### [Airplanes.live](https://airplanes.live) — `Web, API` • `Web, API`
+> **Community-driven, unfiltered live ADS-B flight tracking platform providing global aircraft telemetry and route histories.**
+
+**How to use:** Track civil, commercial, and military aircraft in real time with unfiltered ADS-B telemetry; search by tail number, ICAO hex code, callsign, or squawk.
+
+```bash
+# Open global live flight map:
+# Visit: https://airplanes.live
+
+# Query API for a specific aircraft by ICAO hex code:
+curl -s "https://api.airplanes.live/v2/hex/a1b2c3" | jq .
+```
+
+---
+
 ### News & Media Monitoring (`news`)
 
 #### [Security News Scraper](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/intermediate/security-news-scraper) — `CLI` • `Go`
@@ -152,6 +202,26 @@ cd system-design-101
 go run main.go
 # Or build binary:
 go build -o news-scraper main.go && ./news-scraper
+```
+
+---
+
+### External Attack Surface Recon (`reconnaissance`)
+
+#### [TruffleHog](https://github.com/trufflesecurity/trufflehog) — `CLI` • `Go`
+> **High-performance secrets scanner for finding and verifying leaked credentials, private keys, and API tokens across git history, filesystems, and cloud endpoints.**
+
+**How to use:** Scan git repositories, entire GitHub organizations, S3 buckets, or local filesystems to detect and automatically verify live leaked credentials, private keys, and API tokens.
+
+```bash
+# Scan a git repository for exposed secrets and verify their validity:
+trufflehog git https://github.com/target/repo.git
+
+# Scan an entire GitHub organization:
+trufflehog github --org=targetorg
+
+# Scan local directory:
+trufflehog filesystem /path/to/target
 ```
 
 ---

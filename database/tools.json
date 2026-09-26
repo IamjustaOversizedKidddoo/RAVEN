@@ -503,5 +503,169 @@
     "last_verified": "2026-09-26",
     "how_to_use": "Analyze low-level UDP socket communication, state synchronization algorithms, and packet serialization when reverse-engineering custom network protocols.",
     "command_example": "git clone https://github.com/0xFA11/MultiplayerNetworkingResources.git"
+  },
+  {
+    "name": "FaceCheck.ID",
+    "description": "AI-powered facial recognition search engine to find social media profiles, news articles, and web appearances by photo.",
+    "category": "images",
+    "secondary_categories": [
+      "people",
+      "social-media"
+    ],
+    "repository": "https://facecheck.id",
+    "website": "https://facecheck.id",
+    "language": [
+      "Python",
+      "Web"
+    ],
+    "interface": [
+      "Web",
+      "API"
+    ],
+    "platform": [
+      "Web",
+      "Cross-platform"
+    ],
+    "installation": "pip install facecheck",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "Proprietary / Free Web Tool",
+    "status": "Active",
+    "tags": [
+      "facial-recognition",
+      "reverse-image-search",
+      "face-search",
+      "identity-verification",
+      "photo-osint"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26",
+    "how_to_use": "Upload a photo of a person to reverse-search facial biometrics across public web pages, social media profiles, news publications, and public registries.",
+    "command_example": "# Access web interface directly:\n# Visit: https://facecheck.id\n\n# Or query via unofficial Python API:\npip install requests\n# Upload image and search biometric face matches"
+  },
+  {
+    "name": "Robin",
+    "description": "AI-powered dark web OSINT investigation tool utilizing LLMs for query refinement, intelligent filtering, and onion summarization.",
+    "category": "dark-web",
+    "secondary_categories": [
+      "search-engines",
+      "reconnaissance",
+      "threat-intelligence"
+    ],
+    "repository": "https://github.com/apurvsinghgautam/robin",
+    "website": "",
+    "language": [
+      "Python"
+    ],
+    "interface": [
+      "CLI",
+      "Web"
+    ],
+    "platform": [
+      "Linux",
+      "Docker",
+      "macOS"
+    ],
+    "installation": "docker pull apurvsg/robin:latest",
+    "requires_api_key": true,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "dark-web",
+      "ai-osint",
+      "llm",
+      "tor",
+      "onion-search",
+      "threat-intelligence"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26",
+    "how_to_use": "Conduct AI-assisted dark web intelligence gathering; Robin uses LLMs (OpenAI, Claude, Gemini, or local Ollama) to rephrase search queries, crawl onion engines, and summarize findings.",
+    "command_example": "# Run Web UI mode via Docker (requires running Tor daemon):\ndocker run -d -p 5000:5000 --env-file .env apurvsg/robin:latest\n\n# Or CLI investigation:\npython robin.py --query \"target alias or keyword\" --llm gpt-4"
+  },
+  {
+    "name": "Airplanes.live",
+    "description": "Community-driven, unfiltered live ADS-B flight tracking platform providing global aircraft telemetry and route histories.",
+    "category": "aviation",
+    "secondary_categories": [
+      "maps",
+      "geolocation"
+    ],
+    "repository": "https://airplanes.live",
+    "website": "https://airplanes.live",
+    "language": [
+      "Web",
+      "API"
+    ],
+    "interface": [
+      "Web",
+      "API"
+    ],
+    "platform": [
+      "Web",
+      "Cross-platform"
+    ],
+    "installation": "curl -s https://api.airplanes.live/v2/point/0/0/250",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "Community Open Data / GPL",
+    "status": "Active",
+    "tags": [
+      "aviation",
+      "flight-tracking",
+      "ads-b",
+      "radar",
+      "aircraft-telemetry",
+      "flight-osint"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26",
+    "how_to_use": "Track civil, commercial, and military aircraft in real time with unfiltered ADS-B telemetry; search by tail number, ICAO hex code, callsign, or squawk.",
+    "command_example": "# Open global live flight map:\n# Visit: https://airplanes.live\n\n# Query API for a specific aircraft by ICAO hex code:\ncurl -s \"https://api.airplanes.live/v2/hex/a1b2c3\" | jq ."
+  },
+  {
+    "name": "TruffleHog",
+    "description": "High-performance secrets scanner for finding and verifying leaked credentials, private keys, and API tokens across git history, filesystems, and cloud endpoints.",
+    "category": "reconnaissance",
+    "secondary_categories": [
+      "automation",
+      "infrastructure",
+      "breach-intelligence"
+    ],
+    "repository": "https://github.com/trufflesecurity/trufflehog",
+    "website": "https://trufflesecurity.com/trufflehog",
+    "language": [
+      "Go"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "installation": "curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "AGPL-3.0",
+    "status": "Active",
+    "tags": [
+      "secret-scanning",
+      "credential-discovery",
+      "api-keys",
+      "git-recon",
+      "attack-surface"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26",
+    "how_to_use": "Scan git repositories, entire GitHub organizations, S3 buckets, or local filesystems to detect and automatically verify live leaked credentials, private keys, and API tokens.",
+    "command_example": "# Scan a git repository for exposed secrets and verify their validity:\ntrufflehog git https://github.com/target/repo.git\n\n# Scan an entire GitHub organization:\ntrufflehog github --org=targetorg\n\n# Scan local directory:\ntrufflehog filesystem /path/to/target"
   }
 ]

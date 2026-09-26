@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
 RAVEN Quick-Arsenal Generator
-Generates clean, direct, copy-paste tool blocks for README.md.
+Generates clean, direct, copy-paste tool blocks and updates badges & navigation.
 """
 
 import json
 import os
+import re
 import sys
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -13,12 +14,20 @@ DB_PATH = os.path.join(ROOT_DIR, "database", "tools.json")
 CAT_PATH = os.path.join(ROOT_DIR, "database", "categories.json")
 README_PATH = os.path.join(ROOT_DIR, "README.md")
 
+def slugify(text):
+    s = text.lower()
+    s = re.sub(r'[^a-z0-9\s-]', '', s)
+    s = re.sub(r'[\s-]+', '-', s).strip('-')
+    return s
+
 def generate():
     with open(CAT_PATH, "r", encoding="utf-8") as f:
         categories = json.load(f)
 
     with open(DB_PATH, "r", encoding="utf-8") as f:
         tools = json.load(f)
+
+    total_tools = len(tools)
 
     # Group tools by category
     cat_tools = {c["id"]: [] for c in categories}
@@ -29,8 +38,9 @@ def generate():
         if cat in cat_tools:
             cat_tools[cat].append(t)
 
-    # Build direct, clean tool blocks
+    # Build direct, clean tool blocks & active category nav
     blocks = []
+    active_nav = []
     
     for c in categories:
         cid = c["id"]
@@ -39,7 +49,11 @@ def generate():
         if not tlist:
             continue
 
-        blocks.append(f"### {cname} (`{cid}`)\n")
+        header_title = f"{cname} (`{cid}`)"
+        anchor = slugify(f"{cname} {cid}")
+        active_nav.append(f"[{cname}](#{anchor})")
+
+        blocks.append(f"### {header_title}\n")
         
         for t in sorted(tlist, key=lambda x: x["name"].lower()):
             name = t["name"]
@@ -59,20 +73,35 @@ def generate():
         blocks.append("---\n")
 
     arsenal_md = "\n".join(blocks).strip()
+    nav_md = " • ".join(active_nav)
 
     # Update README
     if os.path.exists(README_PATH):
         with open(README_PATH, "r", encoding="utf-8") as f:
             content = f.read()
 
+        # Update Tool Count Badge
+        content = re.sub(
+            r'CATALOGED%20TOOLS-\d+',
+            f'CATALOGED%20TOOLS-{total_tools}',
+            content
+        )
+
+        # Update Quick Navigation
+        if "<!-- NAV:START -->" in content and "<!-- NAV:END -->" in content:
+            pre = content.split("<!-- NAV:START -->")[0]
+            post = content.split("<!-- NAV:END -->")[1]
+            content = pre + "<!-- NAV:START -->\n" + nav_md + "\n<!-- NAV:END -->" + post
+
+        # Update Arsenal
         if "<!-- ARSENAL:START -->" in content and "<!-- ARSENAL:END -->" in content:
             pre = content.split("<!-- ARSENAL:START -->")[0]
             post = content.split("<!-- ARSENAL:END -->")[1]
             content = pre + "<!-- ARSENAL:START -->\n" + arsenal_md + "\n<!-- ARSENAL:END -->" + post
 
-            with open(README_PATH, "w", encoding="utf-8") as f:
-                f.write(content)
-            print("[OK] README.md updated with clean arsenal blocks!")
+        with open(README_PATH, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"[OK] README.md updated! Tools: {total_tools}")
 
 if __name__ == "__main__":
     generate()
