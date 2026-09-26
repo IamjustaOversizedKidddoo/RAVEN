@@ -1,1 +1,196 @@
-[]
+[
+  {
+    "name": "MailAccess",
+    "description": "High-throughput email OSINT investigation toolkit and domain-level mailbox harvesting engine.",
+    "category": "emails",
+    "secondary_categories": [
+      "reconnaissance",
+      "breach-intelligence",
+      "domains"
+    ],
+    "repository": "https://github.com/KatrielMoses/MailAccess",
+    "website": "https://mailaccess.pro",
+    "language": [
+      "Python",
+      "TypeScript"
+    ],
+    "interface": [
+      "CLI",
+      "Web"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "installation": "pip install mailaccess",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "email",
+      "email-osint",
+      "domain-harvesting",
+      "identity-graph",
+      "recon"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "TorBot",
+    "description": "Dark web OSINT crawler, hidden services mapper, and link tree visualizer for the Tor network.",
+    "category": "dark-web",
+    "secondary_categories": [
+      "visualization",
+      "search-engines",
+      "reconnaissance"
+    ],
+    "repository": "https://github.com/DedSecInside/TorBot",
+    "website": "",
+    "language": [
+      "Python"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Linux",
+      "macOS",
+      "Docker"
+    ],
+    "installation": "git clone https://github.com/DedSecInside/TorBot.git && cd TorBot && pip install -r requirements.txt",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "GPL-3.0",
+    "status": "Active",
+    "tags": [
+      "dark-web",
+      "tor",
+      "onion-crawler",
+      "hidden-services",
+      "threat-intelligence"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Horus",
+    "description": "Multi-purpose OSINT and digital forensics assistant for unified artifact investigation and data synthesis.",
+    "category": "investigation-frameworks",
+    "secondary_categories": [
+      "metadata",
+      "geolocation",
+      "reconnaissance"
+    ],
+    "repository": "https://github.com/6abd/horus",
+    "website": "",
+    "language": [
+      "Python"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "installation": "git clone https://github.com/6abd/horus.git && cd horus && pip install -r requirements.txt",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "GPL-3.0",
+    "status": "Active",
+    "tags": [
+      "osint-framework",
+      "forensics",
+      "steganography",
+      "investigation-assistant",
+      "recon"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Security News Scraper",
+    "description": "Automated cybersecurity news aggregator, RSS harvester, and threat advisory scraper.",
+    "category": "news",
+    "secondary_categories": [
+      "threat-intelligence",
+      "automation"
+    ],
+    "repository": "https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/intermediate/security-news-scraper",
+    "website": "",
+    "language": [
+      "Go"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "installation": "git clone https://github.com/CarterPerez-dev/Cybersecurity-Projects.git && cd Cybersecurity-Projects/PROJECTS/intermediate/security-news-scraper && go run main.go",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "news-scraper",
+      "threat-intelligence",
+      "cve-tracking",
+      "cybersecurity-news",
+      "rss-aggregation"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  },
+  {
+    "name": "Steganography Multi-Tool",
+    "description": "Forensic image steganography analyzer and hidden payload detection utility.",
+    "category": "metadata",
+    "secondary_categories": [
+      "images",
+      "miscellaneous"
+    ],
+    "repository": "https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/steganography-multi-tool",
+    "website": "",
+    "language": [
+      "Python"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "installation": "git clone https://github.com/CarterPerez-dev/Cybersecurity-Projects.git && cd Cybersecurity-Projects/PROJECTS/beginner/steganography-multi-tool && python -m venv venv && pip install -r requirements.txt",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "steganography",
+      "metadata",
+      "image-forensics",
+      "payload-extraction",
+      "forensic-analysis"
+    ],
+    "added_date": "2026-09-26",
+    "last_verified": "2026-09-26"
+  }
+]

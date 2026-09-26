@@ -67,7 +67,7 @@ def generate():
                 tname = t['name']
                 tdesc = t['description']
                 doc_path = f'tools/{cid}/{tname.lower().replace(" ", "-")}.md'
-                search_index_rows.append(f'- **[{tname}]({doc_path})** — {tdesc}')
+                search_index_rows.append(f'- **[{tname}]({doc_path})** - {tdesc}')
             search_index_rows.append('')
 
     if has_tools:

@@ -82,7 +82,7 @@ The table below reflects all operational categories defined in RAVEN's taxonomy 
 | :--- | :--- | :---: | :---: |
 | **People & Identity** | Public records, identity verification, background research, and person-of-interest discovery. | `0` | [`people/`](tools/people/) |
 | **Usernames & Handles** | Cross-platform username enumeration, account existence validation, and profile correlation. | `0` | [`usernames/`](tools/usernames/) |
-| **Email Intelligence** | Email address discovery, mailbox verification, deliverability checking, and domain association. | `0` | [`emails/`](tools/emails/) |
+| **Email Intelligence** | Email address discovery, mailbox verification, deliverability checking, and domain association. | `1` | [`emails/`](tools/emails/) |
 | **Domain Intelligence** | WHOIS lookups, historical domain ownership, registrar analysis, and registration patterns. | `0` | [`domains/`](tools/domains/) |
 | **DNS Telemetry** | Forward/reverse DNS resolution, zone transfer auditing, DNS record tracking, and cache snooping. | `0` | [`dns/`](tools/dns/) |
 | **Subdomain Enumeration** | Passive and active subdomain discovery, Certificate Transparency logs, and brute-force scanners. | `0` | [`subdomains/`](tools/subdomains/) |
@@ -91,13 +91,13 @@ The table below reflects all operational categories defined in RAVEN's taxonomy 
 | **Image & Forensic Intelligence** | Reverse image search, EXIF metadata extraction, manipulation detection, and visual analysis. | `0` | [`images/`](tools/images/) |
 | **Geolocation & Terrain** | IP geolocation, coordinate triangulation, visual terrain matching, and photo location identification. | `0` | [`geolocation/`](tools/geolocation/) |
 | **Maps & Geospatial Intelligence** | Satellite imagery analysis, geographic information systems (GIS), mapping tools, and spatial data. | `0` | [`maps/`](tools/maps/) |
-| **Metadata Analysis** | Document metadata extraction (PDF, DOCX, XLSX, media), author attribution, and software signatures. | `0` | [`metadata/`](tools/metadata/) |
+| **Metadata Analysis** | Document metadata extraction (PDF, DOCX, XLSX, media), author attribution, and software signatures. | `1` | [`metadata/`](tools/metadata/) |
 | **Documents & Public Filings** | Public document scrapers, regulatory filings, government gazettes, and academic paper retrieval. | `0` | [`documents/`](tools/documents/) |
 | **Company & Corporate Intelligence** | Corporate registry lookups, beneficial ownership research, financial statements, and business networks. | `0` | [`companies/`](tools/companies/) |
 | **Organizations & Entities** | Non-profit records, academic institutions, public bodies, and entity relationship mapping. | `0` | [`organizations/`](tools/organizations/) |
 | **Breach & Exposure Intelligence** | Leaked credential queries, exposure verification, paste site indexing, and breach impact analysis. | `0` | [`breach-intelligence/`](tools/breach-intelligence/) |
 | **Threat Actor & C2 Intelligence** | Adversary tracking, malicious infrastructure profiling, IOC databases, and malware campaign telemetry. | `0` | [`threat-intelligence/`](tools/threat-intelligence/) |
-| **Dark Web & Hidden Services** | Tor onion network indexers, I2P discovery, darknet marketplace monitors, and illicit forum telemetry. | `0` | [`dark-web/`](tools/dark-web/) |
+| **Dark Web & Hidden Services** | Tor onion network indexers, I2P discovery, darknet marketplace monitors, and illicit forum telemetry. | `1` | [`dark-web/`](tools/dark-web/) |
 | **Network & IP Intelligence** | Autonomous System (ASN) lookup, BGP routing data, network range discovery, and open port scanning. | `0` | [`network/`](tools/network/) |
 | **Infrastructure & Cloud Assets** | Public cloud asset discovery (S3, Azure blobs, GCP buckets), CDN mapping, and SSL certificate reconnaissance. | `0` | [`infrastructure/`](tools/infrastructure/) |
 | **Phone Number Intelligence** | Carrier lookups, country dialing analysis, caller identification data, and messaging app footprinting. | `0` | [`phone-numbers/`](tools/phone-numbers/) |
@@ -105,13 +105,13 @@ The table below reflects all operational categories defined in RAVEN's taxonomy 
 | **Aviation & Flight Tracking** | ADS-B flight telemetry, aircraft registration lookups, tail number tracing, and flight route history. | `0` | [`aviation/`](tools/aviation/) |
 | **Maritime & Vessel Tracking** | AIS ship positioning, maritime fleet databases, port arrivals/departures, and MMSI/IMO resolution. | `0` | [`maritime/`](tools/maritime/) |
 | **Vehicle Intelligence** | License plate recognition, vehicle identification number (VIN) checks, and motor registry tools. | `0` | [`vehicles/`](tools/vehicles/) |
-| **News & Media Monitoring** | Global news aggregators, RSS feed ingestion, local news search, and media sentiment tracking. | `0` | [`news/`](tools/news/) |
+| **News & Media Monitoring** | Global news aggregators, RSS feed ingestion, local news search, and media sentiment tracking. | `1` | [`news/`](tools/news/) |
 | **Web Archives & Historical Data** | Wayback Machine tools, cached web pages, historical DNS records, and deleted content retrieval. | `0` | [`archives/`](tools/archives/) |
 | **Specialized Search Engines & Dorking** | Advanced Google Dorking, IoT/Industrial search engines (Shodan, Censys), and specialized search portals. | `0` | [`search-engines/`](tools/search-engines/) |
 | **Workflow Automation & Pipelines** | Multi-tool pipelines, scheduled data collection engines, and automated reconnaissance scripts. | `0` | [`automation/`](tools/automation/) |
 | **External Attack Surface Recon** | Broad attack surface management, enterprise perimeter sweeps, and multi-vector target discovery. | `0` | [`reconnaissance/`](tools/reconnaissance/) |
 | **Graph Analysis & Visualization** | Entity relationship graphing, link analysis, timeline visualizers, and visual investigation mapping. | `0` | [`visualization/`](tools/visualization/) |
-| **Comprehensive OSINT Frameworks** | All-in-one modular platforms, investigation management suites, and unified intelligence frameworks. | `0` | [`investigation-frameworks/`](tools/investigation-frameworks/) |
+| **Comprehensive OSINT Frameworks** | All-in-one modular platforms, investigation management suites, and unified intelligence frameworks. | `1` | [`investigation-frameworks/`](tools/investigation-frameworks/) |
 | **Miscellaneous & Auxiliary Tools** | Format converters, encoding/decoding utilities, timezone calculators, and specialized helper scripts. | `0` | [`miscellaneous/`](tools/miscellaneous/) |
 <!-- CATEGORY-TABLE:END -->
 
@@ -122,7 +122,21 @@ The table below reflects all operational categories defined in RAVEN's taxonomy 
 Direct index of tools by operational category:
 
 <!-- SEARCH-INDEX:START -->
-_Catalog currently empty. As tools are ingested via the contribution protocol, they will be indexed here automatically._
+### Email Intelligence
+- **[MailAccess](tools/emails/mailaccess.md)** - High-throughput email OSINT investigation toolkit and domain-level mailbox harvesting engine.
+
+### Metadata Analysis
+- **[Steganography Multi-Tool](tools/metadata/steganography-multi-tool.md)** - Forensic image steganography analyzer and hidden payload detection utility.
+
+### Dark Web & Hidden Services
+- **[TorBot](tools/dark-web/torbot.md)** - Dark web OSINT crawler, hidden services mapper, and link tree visualizer for the Tor network.
+
+### News & Media Monitoring
+- **[Security News Scraper](tools/news/security-news-scraper.md)** - Automated cybersecurity news aggregator, RSS harvester, and threat advisory scraper.
+
+### Comprehensive OSINT Frameworks
+- **[Horus](tools/investigation-frameworks/horus.md)** - Multi-purpose OSINT and digital forensics assistant for unified artifact investigation and data synthesis.
+
 <!-- SEARCH-INDEX:END -->
 
 ---
@@ -132,7 +146,13 @@ _Catalog currently empty. As tools are ingested via the contribution protocol, t
 A comparative matrix of tools across interfaces, runtimes, authentication requirements, and maintenance states.
 
 <!-- TOOL-MATRIX:START -->
-_No tools cataloged yet. Submit an upstream repository to add the first entry._
+| Tool | Category | Interface | Language | API Key | Status | Repository |
+| :--- | :--- | :--- | :--- | :---: | :---: | :--- |
+| **MailAccess** | `emails` | CLI, Web | Python, TypeScript | `None` | `Active` | [Source](https://github.com/KatrielMoses/MailAccess) |
+| **TorBot** | `dark-web` | CLI | Python | `None` | `Active` | [Source](https://github.com/DedSecInside/TorBot) |
+| **Horus** | `investigation-frameworks` | CLI | Python | `None` | `Active` | [Source](https://github.com/6abd/horus) |
+| **Security News Scraper** | `news` | CLI | Go | `None` | `Active` | [Source](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/intermediate/security-news-scraper) |
+| **Steganography Multi-Tool** | `metadata` | CLI | Python | `None` | `Active` | [Source](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/steganography-multi-tool) |
 <!-- TOOL-MATRIX:END -->
 
 ---
