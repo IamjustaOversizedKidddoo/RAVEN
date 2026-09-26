@@ -65,9 +65,14 @@ def generate():
             cmd = t.get("command_example", "")
 
             badges = f"`{ifaces}` • `{langs}`"
+            about_text = t.get("about", desc)
+            who_text = t.get("who_can_use", "Security Researchers, OSINT Analysts")
+
             blocks.append(f"#### [{name}]({repo}) — {badges}")
             blocks.append(f"> **{desc}**\n")
-            blocks.append(f"**How to use:** {how_to}\n")
+            blocks.append(f"* **About**: {about_text}")
+            blocks.append(f"* **Who Can Use It**: {who_text}")
+            blocks.append(f"* **How It Can Be Used**: {how_to}\n")
             if cmd:
                 blocks.append(f"```bash\n{cmd}\n```\n")
         blocks.append("---\n")

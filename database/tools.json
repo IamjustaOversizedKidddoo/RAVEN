@@ -39,8 +39,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Investigate email addresses across breach databases and social networks to build an identity graph, or harvest all corporate employee emails exposed across a target domain.",
-    "command_example": "mailaccess investigate target@example.com\n# Or harvest domain emails:\nmailaccess harvest-emails --domain target.com"
+    "how_to_use": "Trace individual email handles to uncover associated accounts and breach disclosures, or harvest employee email addresses across an entire corporate domain.",
+    "command_example": "mailaccess investigate target@example.com\n# Or harvest domain emails:\nmailaccess harvest-emails --domain target.com",
+    "about": "An open-source email intelligence engine that runs dozens of OSINT modules in parallel across breach databases, social networks, and DNS records to construct a unified identity graph with confidence scores.",
+    "who_can_use": "OSINT Investigators, Corporate Security Analysts, Fraud Examiners, and Penetration Testers."
   },
   {
     "name": "TorBot",
@@ -79,8 +81,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Crawl and map .onion hidden services, verify live uptime of onion endpoints, and generate interactive link-tree graphs illustrating dark web infrastructure dependencies.",
-    "command_example": "python torbot -u http://<target-service>.onion --status\n# Recursive crawl and save link tree:\npython torbot -u http://<target-service>.onion --depth 2 --save json"
+    "how_to_use": "Verify if illicit marketplaces or leak sites are active, crawl dark web nodes recursively, and export relationship link trees for network graph analysis.",
+    "command_example": "python torbot -u http://<target-service>.onion --status\n# Recursive crawl and save link tree:\npython torbot -u http://<target-service>.onion --depth 2 --save json",
+    "about": "A specialized dark web OSINT crawler designed to safely navigate, index, and analyze .onion hidden services, tracking link graphs and verifying service uptime.",
+    "who_can_use": "Dark Web Threat Analysts, Cybercrime Investigators, Law Enforcement OSINT Teams, and CTI Researchers."
   },
   {
     "name": "Horus",
@@ -120,8 +124,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Perform multi-vector OSINT triage, correlate indicators (usernames, domains, hashes), inspect metadata, and decode suspect artifacts via a unified terminal interface.",
-    "command_example": "python main.py --target \"identifier\" --module osint"
+    "how_to_use": "Perform rapid multi-vector triage on unclassified indicators (handles, IP addresses, domains, files) from an interactive CLI before launching specialized heavyweight tools.",
+    "command_example": "python main.py --target \"identifier\" --module osint",
+    "about": "A unified Python OSINT and digital forensics assistant that combines indicator triage, metadata extraction, steganography checks, and encoding routines in a single shell.",
+    "who_can_use": "Incident Responders, OSINT Analysts, Forensics Investigators, and Security Researchers."
   },
   {
     "name": "Security News Scraper",
@@ -160,8 +166,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Scrape, aggregate, and parse the latest cybersecurity news, vendor zero-day advisories, and extracted CVE identifiers into structured feeds for daily threat monitoring.",
-    "command_example": "go run main.go\n# Or build binary:\ngo build -o news-scraper main.go && ./news-scraper"
+    "how_to_use": "Run scheduled or on-demand sweeps across security news sites to generate structured feeds of zero-day exploits and trending CVE advisories for intelligence reports.",
+    "command_example": "go run main.go\n# Or build standalone binary:\ngo build -o news-scraper main.go && ./news-scraper",
+    "about": "A high-performance command-line scraper built in Go that automatically monitors, scrapes, and parses cybersecurity publications and vendor bulletins for CVE disclosures.",
+    "who_can_use": "Threat Intelligence Analysts, Security Operations (SOC) Teams, Vulnerability Managers, and Tech Journalists."
   },
   {
     "name": "Steganography Multi-Tool",
@@ -200,8 +208,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Analyze digital image files (PNG, BMP, JPG) for hidden data, perform LSB analysis, and extract concealed textual payloads or embedded binary streams.",
-    "command_example": "python main.py --decode --image evidence.png\n# Encode message:\npython main.py --encode --image cover.png --output stego.png --message \"Secret\""
+    "how_to_use": "Inspect suspicious image files recovered during investigations for hidden data, or test covert communications channels in forensic exercises.",
+    "command_example": "python main.py --decode --image evidence.png\n# Encode message:\npython main.py --encode --image cover.png --output stego.png --message \"Secret\"",
+    "about": "A digital image forensics utility designed to detect, encode, and extract concealed textual data and binary streams using Least Significant Bit (LSB) manipulation.",
+    "who_can_use": "Digital Forensics Analysts, Incident Responders, Security Educators, and CTF Competitors."
   },
   {
     "name": "Scapy",
@@ -241,8 +251,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Craft custom packet probes (TCP/UDP/ICMP), perform low-level network tracerouting, audit firewall rule boundaries, or sniff and dissect live interface frames.",
-    "command_example": "scapy\n# Example SYN probe:\n>>> sr1(IP(dst=\"192.168.1.1\")/TCP(dport=80, flags=\"S\"), timeout=2)"
+    "how_to_use": "Construct custom network probes, audit firewall packet-filtering rules, trace complex network hops, or capture and dissect live promiscuous interface traffic.",
+    "command_example": "scapy\n# Example TCP SYN probe:\n>>> sr1(IP(dst=\"192.168.1.1\")/TCP(dport=80, flags=\"S\"), timeout=2)",
+    "about": "The premier Python interactive packet manipulation program capable of forging, decoding, transmitting, and dissecting raw network packets for hundreds of protocols.",
+    "who_can_use": "Network Engineers, Penetration Testers, Security Researchers, and Protocol Reverse Engineers."
   },
   {
     "name": "Sniffnet",
@@ -281,8 +293,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Monitor live network traffic through a cross-platform GUI to analyze connection bandwidth, track peer IP countries, and inspect communicating Autonomous Systems (ASNs).",
-    "command_example": "sniffnet"
+    "how_to_use": "Launch the GUI during investigations to audit outbound network connections from your lab workstation in real time, identify communicating country endpoints, and export pcaps.",
+    "command_example": "sniffnet",
+    "about": "A modern, cross-platform graphical network traffic monitor written in Rust that visualizes live bandwidth, connection channels, peer geographic locations, and autonomous systems.",
+    "who_can_use": "Security Analysts, System Administrators, Network Engineers, and Privacy-Conscious Investigators."
   },
   {
     "name": "Rveng",
@@ -319,8 +333,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Disassemble compiled PE/ELF binaries, analyze import tables and headers, and harvest hardcoded C2 addresses and configuration strings offline during sample triage.",
-    "command_example": "python main.py --file target_sample.bin --disassemble\n# Inspect headers:\npython main.py --file target_sample.exe --headers"
+    "how_to_use": "Disassemble unknown binary executables recovered during investigations, extract hardcoded C2 strings, and analyze import address tables (IAT) offline.",
+    "command_example": "python main.py --file target_sample.bin --disassemble\n# Inspect PE headers:\npython main.py --file target_sample.exe --headers",
+    "about": "An advanced binary analysis and reverse engineering framework designed to disassemble executable binaries, parse PE/ELF headers, and inspect function tables.",
+    "who_can_use": "Malware Analysts, Reverse Engineers, Forensics Specialists, and Security Students."
   },
   {
     "name": "Containerlab",
@@ -357,8 +373,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Deploy and manage containerized networking labs (Nokia, Cisco, Arista routers) from declarative YAML files to simulate target enterprise network topologies in Docker.",
-    "command_example": "sudo containerlab deploy --topo topology.clab.yml\n# Inspect running topology:\nsudo containerlab inspect --all"
+    "how_to_use": "Define target enterprise routing topologies in YAML and spin up simulated hardware appliances locally to validate routing paths and firewall policies harmlessly.",
+    "command_example": "sudo containerlab deploy --topo topology.clab.yml\n# Inspect running topology:\nsudo containerlab inspect --all",
+    "about": "A declarative CLI tool that launches containerized network routing topologies using Docker and Linux namespaces to simulate multi-vendor network hardware (Cisco, Arista, Nokia, FRR).",
+    "who_can_use": "Network Architects, Security Lab Builders, DevOps Engineers, and Red/Blue Teams."
   },
   {
     "name": "System Design 101",
@@ -393,8 +411,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Study visual architectural blueprints of distributed systems (load balancers, CDN edge caching, reverse proxies, and microservices) to model and analyze enterprise attack surfaces.",
-    "command_example": "git clone https://github.com/ByteByteGoHq/system-design-101.git\ncd system-design-101"
+    "how_to_use": "Study visual blueprints of enterprise web infrastructure (OAuth flows, reverse proxy caching, cloud load balancing) to model target digital perimeters accurately.",
+    "command_example": "git clone https://github.com/ByteByteGoHq/system-design-101.git\ncd system-design-101",
+    "about": "A visual encyclopedia by ByteByteGo explaining the inner architecture of large-scale distributed systems, CDNs, microservices, load balancers, and database clusters.",
+    "who_can_use": "Security Architects, Infrastructure Analysts, Technical Investigators, and Systems Engineers."
   },
   {
     "name": "Awesome Networking (Facyber)",
@@ -429,8 +449,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Consult curated reference guides covering protocol specifications (TCP/IP, BGP, OSPF), RFC standards, packet structure, and network troubleshooting utilities.",
-    "command_example": "git clone https://github.com/facyber/awesome-networking.git"
+    "how_to_use": "Quickly look up protocol header structures, subnetting calculations, and standard networking RFCs when analyzing infrastructure and network telemetry.",
+    "command_example": "git clone https://github.com/facyber/awesome-networking.git",
+    "about": "A curated technical directory of computer networking fundamentals, protocol specifications, RFC standards, packet analysis methodologies, and network troubleshooting tools.",
+    "who_can_use": "Network Engineers, Infrastructure Analysts, Students, and Technical Intelligence Researchers."
   },
   {
     "name": "Awesome Networking (Nyquist)",
@@ -465,8 +487,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Reference modern network engineering libraries, kernel-bypass capture frameworks, and routing daemons when researching large-scale internet topology and BGP routing.",
-    "command_example": "git clone https://github.com/nyquist/awesome-networking.git"
+    "how_to_use": "Locate carrier-grade routing tools, Looking Glass servers, and high-performance packet capture libraries when investigating autonomous system (ASN) perimeters.",
+    "command_example": "git clone https://github.com/nyquist/awesome-networking.git",
+    "about": "An advanced index of modern network engineering tools, high-speed packet capture engines (DPDK, XDP), BGP routing daemons, and internet-scale telemetry systems.",
+    "who_can_use": "Telecommunications Engineers, Cloud Architects, Internet Topology Researchers, and BGP Analysts."
   },
   {
     "name": "Multiplayer Networking Resources",
@@ -501,8 +525,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Analyze low-level UDP socket communication, state synchronization algorithms, and packet serialization when reverse-engineering custom network protocols.",
-    "command_example": "git clone https://github.com/0xFA11/MultiplayerNetworkingResources.git"
+    "how_to_use": "Reference low-level socket communication paradigms, lag compensation, and packet serialization when analyzing custom real-time network streams.",
+    "command_example": "git clone https://github.com/0xFA11/MultiplayerNetworkingResources.git",
+    "about": "A technical repository compiling architectures, whitepapers, and protocol implementations for real-time UDP communication, packet framing, and state replication.",
+    "who_can_use": "Network Protocol Reverse Engineers, Game Developers, IoT Engineers, and Security Researchers."
   },
   {
     "name": "FaceCheck.ID",
@@ -541,8 +567,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Upload a photo of a person to reverse-search facial biometrics across public web pages, social media profiles, news publications, and public registries.",
-    "command_example": "# Access web interface directly:\n# Visit: https://facecheck.id\n\n# Or query via unofficial Python API:\npip install requests\n# Upload image and search biometric face matches"
+    "how_to_use": "Upload an image containing an unidentified face to locate matching public profiles, social accounts, and public record appearances with biometric confidence rankings.",
+    "command_example": "# Access web interface directly:\n# Visit: https://facecheck.id\n\n# Or query via Python API wrapper:\npip install requests\n# Upload image and search biometric face matches",
+    "about": "An AI-powered facial recognition search platform indexing faces from public websites, social media platforms, news articles, video thumbnails, and public mugshot registries.",
+    "who_can_use": "Private Investigators, Cyber Threat Researchers, Due Diligence Analysts, and Anti-Scam Verification Specialists."
   },
   {
     "name": "Robin",
@@ -583,8 +611,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Conduct AI-assisted dark web intelligence gathering; Robin uses LLMs (OpenAI, Claude, Gemini, or local Ollama) to rephrase search queries, crawl onion engines, and summarize findings.",
-    "command_example": "# Run Web UI mode via Docker (requires running Tor daemon):\ndocker run -d -p 5000:5000 --env-file .env apurvsg/robin:latest\n\n# Or CLI investigation:\npython robin.py --query \"target alias or keyword\" --llm gpt-4"
+    "how_to_use": "Query dark web search engines using plain language; Robin refines the search with underground jargon, retrieves live onion links, and outputs AI-synthesized briefings.",
+    "command_example": "# Run Web UI mode via Docker (requires running Tor daemon):\ndocker run -d -p 5000:5000 --env-file .env apurvsg/robin:latest\n\n# Or CLI investigation:\npython robin.py --query \"target company credentials\" --llm gpt-4",
+    "about": "An AI-augmented dark web intelligence tool that pairs Tor search engines with Large Language Models (LLMs) to automatically optimize query syntax, filter noise, and summarize findings.",
+    "who_can_use": "Threat Intelligence Teams, SOC Analysts, Brand Protection Investigators, and Red Teams."
   },
   {
     "name": "Airplanes.live",
@@ -624,8 +654,10 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Track civil, commercial, and military aircraft in real time with unfiltered ADS-B telemetry; search by tail number, ICAO hex code, callsign, or squawk.",
-    "command_example": "# Open global live flight map:\n# Visit: https://airplanes.live\n\n# Query API for a specific aircraft by ICAO hex code:\ncurl -s \"https://api.airplanes.live/v2/hex/a1b2c3\" | jq ."
+    "how_to_use": "Track state VIP transports, military aircraft, and corporate jets by registration or ICAO hex code without censorship, or query the live REST API for regional airframes.",
+    "command_example": "# Access web radar: https://airplanes.live\n\n# Query aircraft by ICAO hex code:\ncurl -s \"https://api.airplanes.live/v2/hex/a1b2c3\" | jq .",
+    "about": "An open, unfiltered flight tracking service powered by a global volunteer ADS-B radio network that provides raw, uncensored telemetry for civil and military aircraft worldwide.",
+    "who_can_use": "Aviation OSINT Researchers, Investigative Journalists, Geopolitical Analysts, and Defense Observers."
   },
   {
     "name": "TruffleHog",
@@ -665,7 +697,9 @@
     ],
     "added_date": "2026-09-26",
     "last_verified": "2026-09-26",
-    "how_to_use": "Scan git repositories, entire GitHub organizations, S3 buckets, or local filesystems to detect and automatically verify live leaked credentials, private keys, and API tokens.",
-    "command_example": "# Scan a git repository for exposed secrets and verify their validity:\ntrufflehog git https://github.com/target/repo.git\n\n# Scan an entire GitHub organization:\ntrufflehog github --org=targetorg\n\n# Scan local directory:\ntrufflehog filesystem /path/to/target"
+    "how_to_use": "Scan target organization code repositories and cloud buckets to uncover accidentally exposed credentials and verify active permissions without manual testing.",
+    "command_example": "# Scan a public git repository for exposed secrets:\ntrufflehog git https://github.com/target/repo.git\n\n# Scan an entire GitHub organization:\ntrufflehog github --org=targetorg",
+    "about": "A high-speed security scanner that detects secrets, private keys, passwords, and API tokens across git histories, filesystems, and S3 buckets, actively verifying if they are live.",
+    "who_can_use": "AppSec Engineers, External Attack Surface Analysts, Red Teamers, and Penetration Testers."
   }
 ]

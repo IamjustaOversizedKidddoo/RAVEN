@@ -114,6 +114,14 @@
       "command_example": {
         "type": "string",
         "description": "Quick-start example command syntax for the tool."
+      },
+      "about": {
+        "type": "string",
+        "description": "Brief explanation describing the tool, its core mechanics, and why it is useful."
+      },
+      "who_can_use": {
+        "type": "string",
+        "description": "Target audience and professional roles who can benefit from using this tool."
       }
     }
   }
