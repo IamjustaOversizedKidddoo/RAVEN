@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RAVEN Tool Schema",
+  "description": "Schema definition for tools cataloged in the RAVEN OSINT Arsenal",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "name",
+      "description",
+      "category",
+      "repository",
+      "language",
+      "interface",
+      "platform",
+      "installation",
+      "requires_api_key",
+      "requires_authentication",
+      "paid_dependencies",
+      "license",
+      "status",
+      "tags",
+      "added_date",
+      "last_verified"
+    ],
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "secondary_categories": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "repository": {
+        "type": "string"
+      },
+      "website": {
+        "type": "string"
+      },
+      "language": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "interface": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "CLI",
+            "Web",
+            "GUI",
+            "API",
+            "Browser Extension",
+            "Library"
+          ]
+        }
+      },
+      "platform": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "installation": {
+        "type": "string"
+      },
+      "requires_api_key": {
+        "type": "boolean"
+      },
+      "requires_authentication": {
+        "type": "boolean"
+      },
+      "paid_dependencies": {
+        "type": "boolean"
+      },
+      "license": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "Active",
+          "Archived",
+          "Experimental",
+          "Unknown"
+        ]
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "added_date": {
+        "type": "string"
+      },
+      "last_verified": {
+        "type": "string"
+      }
+    }
+  }
+}

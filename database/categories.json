@@ -1,0 +1,402 @@
+[
+  {
+    "id": "people",
+    "name": "People & Identity",
+    "description": "Public records, identity verification, background research, and person-of-interest discovery.",
+    "path": "tools/people",
+    "tags": [
+      "people",
+      "identity",
+      "background",
+      "records"
+    ]
+  },
+  {
+    "id": "usernames",
+    "name": "Usernames & Handles",
+    "description": "Cross-platform username enumeration, account existence validation, and profile correlation.",
+    "path": "tools/usernames",
+    "tags": [
+      "username",
+      "handle",
+      "enumeration",
+      "social"
+    ]
+  },
+  {
+    "id": "emails",
+    "name": "Email Intelligence",
+    "description": "Email address discovery, mailbox verification, deliverability checking, and domain association.",
+    "path": "tools/emails",
+    "tags": [
+      "email",
+      "mailbox",
+      "verification",
+      "smtp"
+    ]
+  },
+  {
+    "id": "domains",
+    "name": "Domain Intelligence",
+    "description": "WHOIS lookups, historical domain ownership, registrar analysis, and registration patterns.",
+    "path": "tools/domains",
+    "tags": [
+      "domain",
+      "whois",
+      "registrar",
+      "ownership"
+    ]
+  },
+  {
+    "id": "dns",
+    "name": "DNS Telemetry",
+    "description": "Forward/reverse DNS resolution, zone transfer auditing, DNS record tracking, and cache snooping.",
+    "path": "tools/dns",
+    "tags": [
+      "dns",
+      "records",
+      "nameservers",
+      "resolution"
+    ]
+  },
+  {
+    "id": "subdomains",
+    "name": "Subdomain Enumeration",
+    "description": "Passive and active subdomain discovery, Certificate Transparency logs, and brute-force scanners.",
+    "path": "tools/subdomains",
+    "tags": [
+      "subdomains",
+      "recon",
+      "certificate-transparency",
+      "enumeration"
+    ]
+  },
+  {
+    "id": "websites",
+    "name": "Websites & Applications",
+    "description": "Web technology profiling, CMS detection, server headers, and source code reconnaissance.",
+    "path": "tools/websites",
+    "tags": [
+      "websites",
+      "cms",
+      "fingerprinting",
+      "tech-stack"
+    ]
+  },
+  {
+    "id": "social-media",
+    "name": "Social Media Intelligence",
+    "description": "Platform-specific profiling, follower network graph analysis, post scraping, and temporal tracking.",
+    "path": "tools/social-media",
+    "tags": [
+      "social-media",
+      "socmint",
+      "networks",
+      "profiles"
+    ]
+  },
+  {
+    "id": "images",
+    "name": "Image & Forensic Intelligence",
+    "description": "Reverse image search, EXIF metadata extraction, manipulation detection, and visual analysis.",
+    "path": "tools/images",
+    "tags": [
+      "images",
+      "exif",
+      "reverse-image",
+      "forensics"
+    ]
+  },
+  {
+    "id": "geolocation",
+    "name": "Geolocation & Terrain",
+    "description": "IP geolocation, coordinate triangulation, visual terrain matching, and photo location identification.",
+    "path": "tools/geolocation",
+    "tags": [
+      "geolocation",
+      "geoint",
+      "coordinates",
+      "location"
+    ]
+  },
+  {
+    "id": "maps",
+    "name": "Maps & Geospatial Intelligence",
+    "description": "Satellite imagery analysis, geographic information systems (GIS), mapping tools, and spatial data.",
+    "path": "tools/maps",
+    "tags": [
+      "maps",
+      "satellite",
+      "gis",
+      "spatial"
+    ]
+  },
+  {
+    "id": "metadata",
+    "name": "Metadata Analysis",
+    "description": "Document metadata extraction (PDF, DOCX, XLSX, media), author attribution, and software signatures.",
+    "path": "tools/metadata",
+    "tags": [
+      "metadata",
+      "documents",
+      "exif",
+      "artifacts"
+    ]
+  },
+  {
+    "id": "documents",
+    "name": "Documents & Public Filings",
+    "description": "Public document scrapers, regulatory filings, government gazettes, and academic paper retrieval.",
+    "path": "tools/documents",
+    "tags": [
+      "documents",
+      "filings",
+      "records",
+      "publications"
+    ]
+  },
+  {
+    "id": "companies",
+    "name": "Company & Corporate Intelligence",
+    "description": "Corporate registry lookups, beneficial ownership research, financial statements, and business networks.",
+    "path": "tools/companies",
+    "tags": [
+      "companies",
+      "corporate",
+      "registry",
+      "ownership"
+    ]
+  },
+  {
+    "id": "organizations",
+    "name": "Organizations & Entities",
+    "description": "Non-profit records, academic institutions, public bodies, and entity relationship mapping.",
+    "path": "tools/organizations",
+    "tags": [
+      "organizations",
+      "entities",
+      "ngos",
+      "institutions"
+    ]
+  },
+  {
+    "id": "breach-intelligence",
+    "name": "Breach & Exposure Intelligence",
+    "description": "Leaked credential queries, exposure verification, paste site indexing, and breach impact analysis.",
+    "path": "tools/breach-intelligence",
+    "tags": [
+      "breach",
+      "credentials",
+      "leaks",
+      "passwords"
+    ]
+  },
+  {
+    "id": "threat-intelligence",
+    "name": "Threat Actor & C2 Intelligence",
+    "description": "Adversary tracking, malicious infrastructure profiling, IOC databases, and malware campaign telemetry.",
+    "path": "tools/threat-intelligence",
+    "tags": [
+      "threat-intel",
+      "cti",
+      "adversaries",
+      "iocs"
+    ]
+  },
+  {
+    "id": "dark-web",
+    "name": "Dark Web & Hidden Services",
+    "description": "Tor onion network indexers, I2P discovery, darknet marketplace monitors, and illicit forum telemetry.",
+    "path": "tools/dark-web",
+    "tags": [
+      "dark-web",
+      "tor",
+      "onion",
+      "i2p"
+    ]
+  },
+  {
+    "id": "network",
+    "name": "Network & IP Intelligence",
+    "description": "Autonomous System (ASN) lookup, BGP routing data, network range discovery, and open port scanning.",
+    "path": "tools/network",
+    "tags": [
+      "network",
+      "ip",
+      "asn",
+      "bgp",
+      "ports"
+    ]
+  },
+  {
+    "id": "infrastructure",
+    "name": "Infrastructure & Cloud Assets",
+    "description": "Public cloud asset discovery (S3, Azure blobs, GCP buckets), CDN mapping, and SSL certificate reconnaissance.",
+    "path": "tools/infrastructure",
+    "tags": [
+      "infrastructure",
+      "cloud",
+      "s3",
+      "ssl",
+      "certificates"
+    ]
+  },
+  {
+    "id": "phone-numbers",
+    "name": "Phone Number Intelligence",
+    "description": "Carrier lookups, country dialing analysis, caller identification data, and messaging app footprinting.",
+    "path": "tools/phone-numbers",
+    "tags": [
+      "phone",
+      "telecom",
+      "carrier",
+      "hlr"
+    ]
+  },
+  {
+    "id": "crypto",
+    "name": "Cryptocurrency & Blockchain",
+    "description": "Blockchain ledger explorers, transaction graph tracing, wallet clustering, and smart contract telemetry.",
+    "path": "tools/crypto",
+    "tags": [
+      "crypto",
+      "blockchain",
+      "bitcoin",
+      "ethereum",
+      "transactions"
+    ]
+  },
+  {
+    "id": "aviation",
+    "name": "Aviation & Flight Tracking",
+    "description": "ADS-B flight telemetry, aircraft registration lookups, tail number tracing, and flight route history.",
+    "path": "tools/aviation",
+    "tags": [
+      "aviation",
+      "aircraft",
+      "flight",
+      "ads-b"
+    ]
+  },
+  {
+    "id": "maritime",
+    "name": "Maritime & Vessel Tracking",
+    "description": "AIS ship positioning, maritime fleet databases, port arrivals/departures, and MMSI/IMO resolution.",
+    "path": "tools/maritime",
+    "tags": [
+      "maritime",
+      "ships",
+      "ais",
+      "vessels",
+      "ports"
+    ]
+  },
+  {
+    "id": "vehicles",
+    "name": "Vehicle Intelligence",
+    "description": "License plate recognition, vehicle identification number (VIN) checks, and motor registry tools.",
+    "path": "tools/vehicles",
+    "tags": [
+      "vehicles",
+      "vin",
+      "license-plate",
+      "automotive"
+    ]
+  },
+  {
+    "id": "news",
+    "name": "News & Media Monitoring",
+    "description": "Global news aggregators, RSS feed ingestion, local news search, and media sentiment tracking.",
+    "path": "tools/news",
+    "tags": [
+      "news",
+      "media",
+      "rss",
+      "press"
+    ]
+  },
+  {
+    "id": "archives",
+    "name": "Web Archives & Historical Data",
+    "description": "Wayback Machine tools, cached web pages, historical DNS records, and deleted content retrieval.",
+    "path": "tools/archives",
+    "tags": [
+      "archives",
+      "wayback",
+      "historical",
+      "cache"
+    ]
+  },
+  {
+    "id": "search-engines",
+    "name": "Specialized Search Engines & Dorking",
+    "description": "Advanced Google Dorking, IoT/Industrial search engines (Shodan, Censys), and specialized search portals.",
+    "path": "tools/search-engines",
+    "tags": [
+      "search-engines",
+      "dorking",
+      "shodan",
+      "censys"
+    ]
+  },
+  {
+    "id": "automation",
+    "name": "Workflow Automation & Pipelines",
+    "description": "Multi-tool pipelines, scheduled data collection engines, and automated reconnaissance scripts.",
+    "path": "tools/automation",
+    "tags": [
+      "automation",
+      "pipelines",
+      "scraping",
+      "orchestration"
+    ]
+  },
+  {
+    "id": "reconnaissance",
+    "name": "External Attack Surface Recon",
+    "description": "Broad attack surface management, enterprise perimeter sweeps, and multi-vector target discovery.",
+    "path": "tools/reconnaissance",
+    "tags": [
+      "recon",
+      "easm",
+      "perimeter",
+      "discovery"
+    ]
+  },
+  {
+    "id": "visualization",
+    "name": "Graph Analysis & Visualization",
+    "description": "Entity relationship graphing, link analysis, timeline visualizers, and visual investigation mapping.",
+    "path": "tools/visualization",
+    "tags": [
+      "visualization",
+      "graphs",
+      "link-analysis",
+      "mapping"
+    ]
+  },
+  {
+    "id": "investigation-frameworks",
+    "name": "Comprehensive OSINT Frameworks",
+    "description": "All-in-one modular platforms, investigation management suites, and unified intelligence frameworks.",
+    "path": "tools/investigation-frameworks",
+    "tags": [
+      "frameworks",
+      "suites",
+      "all-in-one",
+      "platforms"
+    ]
+  },
+  {
+    "id": "miscellaneous",
+    "name": "Miscellaneous & Auxiliary Tools",
+    "description": "Format converters, encoding/decoding utilities, timezone calculators, and specialized helper scripts.",
+    "path": "tools/miscellaneous",
+    "tags": [
+      "misc",
+      "utilities",
+      "helpers",
+      "converters"
+    ]
+  }
+]
