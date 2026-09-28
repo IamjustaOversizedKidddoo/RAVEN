@@ -701,5 +701,130 @@
     "command_example": "# Scan a public git repository for exposed secrets:\ntrufflehog git https://github.com/target/repo.git\n\n# Scan an entire GitHub organization:\ntrufflehog github --org=targetorg",
     "about": "A high-speed security scanner that detects secrets, private keys, passwords, and API tokens across git histories, filesystems, and S3 buckets, actively verifying if they are live.",
     "who_can_use": "AppSec Engineers, External Attack Surface Analysts, Red Teamers, and Penetration Testers."
+  },
+  {
+    "name": "HackingTool",
+    "description": "All-in-one offensive security toolkit for Linux providing a unified menu-driven interface to install, manage, and launch over 70 penetration testing and hacking utilities.",
+    "category": "investigation-frameworks",
+    "secondary_categories": [
+      "reconnaissance",
+      "miscellaneous"
+    ],
+    "repository": "https://github.com/Z4nzu/hackingtool",
+    "website": "",
+    "language": [
+      "Python"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Linux"
+    ],
+    "installation": "git clone https://github.com/Z4nzu/hackingtool.git && cd hackingtool && sudo bash install.sh",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "all-in-one",
+      "penetration-testing",
+      "hacking-toolkit",
+      "offensive-security",
+      "tool-launcher"
+    ],
+    "added_date": "2026-09-29",
+    "last_verified": "2026-09-29",
+    "how_to_use": "Deploy on a Kali or Parrot OS lab machine and launch the interactive menu to install and run any of 70+ tools across categories including information gathering, phishing, exploitation, payload creation, and post-exploitation.",
+    "command_example": "sudo hackingtool\n# Or run from source:\nsudo python3 hackingtool.py",
+    "about": "A comprehensive Linux-based offensive security framework that consolidates installation and execution of over 70 penetration testing tools into a single interactive menu-driven CLI covering the full attacker kill chain.",
+    "who_can_use": "Penetration Testers, Red Team Operators, CTF Competitors, and Offensive Security Students."
+  },
+  {
+    "name": "Ahmia",
+    "description": "Clearnet and Tor-accessible search engine for indexing, discovering, and querying .onion hidden services on the Tor network.",
+    "category": "dark-web",
+    "secondary_categories": [
+      "search-engines",
+      "reconnaissance"
+    ],
+    "repository": "https://github.com/ahmia/ahmia-site",
+    "website": "https://ahmia.fi",
+    "language": [
+      "Python",
+      "Django",
+      "Scrapy"
+    ],
+    "interface": [
+      "Web",
+      "CLI"
+    ],
+    "platform": [
+      "Linux",
+      "Docker",
+      "Web"
+    ],
+    "installation": "git clone https://github.com/ahmia/ahmia-site.git && cd ahmia-site && pip install -r requirements.txt && python manage.py migrate && python manage.py runserver",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "dark-web",
+      "tor",
+      "onion-search",
+      "hidden-services",
+      "search-engine"
+    ],
+    "added_date": "2026-09-29",
+    "last_verified": "2026-09-29",
+    "how_to_use": "Search ahmia.fi directly on the clearnet for .onion keywords, use the Tor .onion mirror for anonymized queries, or self-host the full stack (site + crawler + index) for a private dark web search platform.",
+    "command_example": "# Public clearnet search (no install):\ncurl \"https://ahmia.fi/search/?q=target+keyword\"\n\n# Self-hosted Django instance:\npython manage.py runserver\n# Visit: http://127.0.0.1:8000/search/?q=your+query",
+    "about": "An open-source search engine built for the Tor network that crawls, indexes, and filters .onion hidden services, accessible via clearnet at ahmia.fi or through a dedicated .onion mirror.",
+    "who_can_use": "Threat Intelligence Analysts, Dark Web Researchers, Law Enforcement OSINT Teams, and Cybercrime Investigators."
+  },
+  {
+    "name": "EmailOSINT",
+    "description": "Multi-source email address intelligence tool for querying breach databases, social platform presence, and public records tied to a target email account.",
+    "category": "emails",
+    "secondary_categories": [
+      "breach-intelligence",
+      "reconnaissance"
+    ],
+    "repository": "https://github.com/krishpranav/emailosint",
+    "website": "https://emailosint.org",
+    "language": [
+      "Python"
+    ],
+    "interface": [
+      "CLI"
+    ],
+    "platform": [
+      "Cross-platform",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "installation": "git clone https://github.com/krishpranav/emailosint.git && cd emailosint && pip install -r requirements.txt",
+    "requires_api_key": false,
+    "requires_authentication": false,
+    "paid_dependencies": false,
+    "license": "MIT",
+    "status": "Active",
+    "tags": [
+      "email-osint",
+      "breach-check",
+      "social-presence",
+      "email-footprinting",
+      "identity-recon"
+    ],
+    "added_date": "2026-09-29",
+    "last_verified": "2026-09-29",
+    "how_to_use": "Run against a target email address to enumerate associated social media accounts, check breach database exposure, and map the email's digital footprint across public web registries.",
+    "command_example": "python3 emailosint.py -e target@example.com\n# Check social platforms only:\npython3 emailosint.py -e target@example.com --social\n# Breach check only:\npython3 emailosint.py -e target@example.com --breach",
+    "about": "A Python CLI tool that aggregates intelligence about a target email address from multiple public sources simultaneously — breach databases, social platforms, and open web registries — delivering a consolidated digital footprint report.",
+    "who_can_use": "OSINT Investigators, Fraud Examiners, Threat Intelligence Analysts, and Security Researchers."
   }
 ]

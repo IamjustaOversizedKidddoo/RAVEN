@@ -12,7 +12,7 @@
 > **Fast, actionable OSINT & security research arsenal. Open, search, grab the command, and run.**
 
 [![Status](https://img.shields.io/badge/STATUS-OPERATIONAL-00FF66?style=flat-square&labelColor=0a0a0a)](https://github.com/IamjustaOversizedKidddoo/RAVEN)
-[![Tools](https://img.shields.io/badge/CATALOGED%20TOOLS-17-blue?style=flat-square&labelColor=0a0a0a)](database/tools.json)
+[![Tools](https://img.shields.io/badge/CATALOGED%20TOOLS-20-blue?style=flat-square&labelColor=0a0a0a)](database/tools.json)
 [![Categories](https://img.shields.io/badge/TAXONOMY-33%20DOMAINS-purple?style=flat-square&labelColor=0a0a0a)](database/categories.json)
 [![License](https://img.shields.io/badge/LICENSE-MIT-lightgrey?style=flat-square&labelColor=0a0a0a)](LICENSE)
 
@@ -44,6 +44,21 @@ Jump directly to an active category:
 mailaccess investigate target@example.com
 # Or harvest domain emails:
 mailaccess harvest-emails --domain target.com
+```
+
+#### [EmailOSINT](https://github.com/krishpranav/emailosint) — `CLI` • `Python`
+> **Multi-source email address intelligence tool for querying breach databases, social platform presence, and public records tied to a target email account.**
+
+* **About**: A Python CLI tool that aggregates intelligence about a target email address from multiple public sources simultaneously — breach databases, social platforms, and open web registries — delivering a consolidated digital footprint report.
+* **Who Can Use It**: OSINT Investigators, Fraud Examiners, Threat Intelligence Analysts, and Security Researchers.
+* **How It Can Be Used**: Run against a target email address to enumerate associated social media accounts, check breach database exposure, and map the email's digital footprint across public web registries.
+
+```bash
+python3 emailosint.py -e target@example.com
+# Check social platforms only:
+python3 emailosint.py -e target@example.com --social
+# Breach check only:
+python3 emailosint.py -e target@example.com --breach
 ```
 
 ---
@@ -113,6 +128,23 @@ python robin.py --query "target company credentials" --llm gpt-4
 python torbot -u http://<target-service>.onion --status
 # Recursive crawl and save link tree:
 python torbot -u http://<target-service>.onion --depth 2 --save json
+```
+
+#### [Ahmia](https://ahmia.fi) — `Web, CLI` • `Python, Django`
+> **Clearnet and Tor-accessible search engine for indexing, discovering, and querying .onion hidden services on the Tor network.**
+
+* **About**: An open-source search engine built for the Tor network that crawls, indexes, and filters .onion hidden services, accessible via clearnet at ahmia.fi or through a dedicated .onion mirror.
+* **Who Can Use It**: Threat Intelligence Analysts, Dark Web Researchers, Law Enforcement OSINT Teams, and Cybercrime Investigators.
+* **How It Can Be Used**: Search ahmia.fi directly on the clearnet for .onion keywords, use the Tor .onion mirror for anonymized queries, or self-host the full stack (site + crawler + index) for a private dark web search platform.
+
+```bash
+# Public clearnet search (no install needed):
+curl "https://ahmia.fi/search/?q=target+keyword"
+
+# Self-hosted Django instance:
+git clone https://github.com/ahmia/ahmia-site.git
+cd ahmia-site && pip install -r requirements.txt
+python manage.py runserver
 ```
 
 ---
@@ -261,6 +293,21 @@ trufflehog github --org=targetorg
 
 ```bash
 python main.py --target "identifier" --module osint
+```
+
+#### [HackingTool](https://github.com/Z4nzu/hackingtool) — `CLI` • `Python`
+> **All-in-one offensive security toolkit for Linux providing a unified menu-driven interface to install, manage, and launch over 70 penetration testing and hacking utilities.**
+
+* **About**: A comprehensive Linux-based offensive security framework that consolidates installation and execution of over 70 penetration testing tools into a single interactive menu-driven CLI covering the full attacker kill chain.
+* **Who Can Use It**: Penetration Testers, Red Team Operators, CTF Competitors, and Offensive Security Students.
+* **How It Can Be Used**: Deploy on a Kali or Parrot OS lab machine and launch the interactive menu to install and run any of 70+ tools across categories including information gathering, phishing, exploitation, payload creation, and post-exploitation.
+
+```bash
+git clone https://github.com/Z4nzu/hackingtool.git
+cd hackingtool && sudo bash install.sh
+
+# Launch the interactive menu:
+sudo hackingtool
 ```
 
 ---
