@@ -1,0 +1,11 @@
+*.pyc
+*.bak
+*.log
+venv/
+ahmia/banned_domains.txt
+onionAddDatabase
+.DS_Store
+ahmia/migrations/
+ahmia/__pycache__
+.env
+staticfiles

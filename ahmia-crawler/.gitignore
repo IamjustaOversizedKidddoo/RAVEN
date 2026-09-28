@@ -1,0 +1,31 @@
+# Logs:
+*.log
+*.csv
+*.json
+
+# Python template
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Backups
+*.bak
+
+# Sphinx documentation
+docs/_build/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+VENV/
+env.bak/
+venv.bak/
+
+# Scrapy temp job directory
+jobdir*/
+
+# hidden folders
+.idea/
